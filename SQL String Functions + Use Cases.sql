@@ -36,7 +36,7 @@ From EmployeeErrors
 
 --Select err.FirstName, Substring(err.FirstName,1,3), dem.FirstName, Substring(dem.FirstName,1,3)
 --FROM EmployeeErrors err
---JOIN SQLTutorial.dbo.EmployeeDemographics dem
+--JOIN EmployeeDemographics dem
 --	on Substring(err.FirstName,1,3) = Substring(dem.FirstName,1,3)
 
 
