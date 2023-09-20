@@ -107,7 +107,8 @@ order by 2,3
 -- total population vs vaccinations 
 
 
-using CTE
+--using CTE
+
 With PopvsVac(Continent, Location, date, population, new_vaccinations, RollingPeopleVaccinated)
 as
 (
@@ -120,7 +121,7 @@ Join PortfolioProject1..CovidVaccinations vac
 where dea.continent is not null and vac.new_vaccinations is not null 
 --order by 2,3
 )
-select *, (RollingPeopleVaccinated/population)*100
+select *, (RollingPeopleVaccinated/population)*100 as RollingPeopleVaccinatedPercentage
 from PopvsVac
 
 
